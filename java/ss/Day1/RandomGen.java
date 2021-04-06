@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class RandomGen {
 
-    public RandomGen() {
+    public RandomGen() { 
 
         Scanner user = new Scanner(System.in);
         Random rand = new Random();
