@@ -4,6 +4,17 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;
 
+/*-----------------------------------------------------------*
+Program Useage:    
+Write new message into an exisiting file.                          
+*-----------------------------------------------------------*
+1) Open File
+2) Get User Messae to append 
+3) Add user's message to file.
+*-----------------------------------------------------------*
+Author: Carl Clarke @ Smoothstack
+*-----------------------------------------------------------*/
+
 public class Appender {
 
     File file;

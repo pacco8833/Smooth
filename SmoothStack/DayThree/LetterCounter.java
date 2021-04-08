@@ -5,6 +5,17 @@ import java.io.File;
 import java.util.Scanner;
 import java.io.FileReader;
 
+/*-----------------------------------------------------------*
+Program Useage:    
+Count number of occurances of a  particular letter                            
+*-----------------------------------------------------------*
+1) Open File
+2) Get Letter The User wants to find 
+3) Count number of letters in file.
+*-----------------------------------------------------------*
+Author: Carl Clarke @ Smoothstack
+*-----------------------------------------------------------*/
+
 public class LetterCounter {
 
     private static Scanner user = new Scanner(System.in);
@@ -33,28 +44,6 @@ public class LetterCounter {
         return new File(str);
     }
 
-    private int counter(File file, char let) {
-
-        int count = 0, str;
-
-        try (FileReader reader = new FileReader(file)) {
-            BufferedReader buffer = new BufferedReader(reader);
-
-            while ((str = buffer.read()) != -1) {
-                if (str == let) {
-                    count++;
-                    
-                }
-            }
-        } catch (java.io.IOException e) {
-            System.out.println(
-                    "The File " + file + " does not seem to exist. Please make sure it is in the correct path.");
-        } catch (Exception e) {
-            System.out.println("Exception " + e + " needs to be handled more gracefully.");
-        }
-        return count;
-    }
-
     private char getLetter() {
 
         String letter = "a";
@@ -67,6 +56,28 @@ public class LetterCounter {
             System.out.println("Exception " + e + " needs to be handled more gracefully\n Line 65");
         }
         return letter.charAt(0);
+    }
+
+    private int counter(File file, char let) {
+
+        int count = 0, str;
+
+        try (FileReader reader = new FileReader(file)) {
+            BufferedReader buffer = new BufferedReader(reader);
+
+            while ((str = buffer.read()) != -1) {
+                if (str == let) {
+                    count++;
+
+                }
+            }
+        } catch (java.io.IOException e) {
+            System.out.println(
+                    "The File " + file + " does not seem to exist. Please make sure it is in the correct path.");
+        } catch (Exception e) {
+            System.out.println("Exception " + e + " needs to be handled more gracefully.");
+        }
+        return count;
     }
 
     public static void main(String[] args) {
