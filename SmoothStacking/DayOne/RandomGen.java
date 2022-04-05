@@ -1,11 +1,21 @@
-//package java.ss.Day1;
+package ss.WeekOne.DayOne;
+
+/*----------------------------------------------------------------------------
+                            Program Useage:
+*----------------------------------------------------------------------------*
+1) Make Random number
+2) Ask user for 5 guesses
+3) Return if they are correct or not.
+
+Author: Carl Clarke @ Smoothstack
+----------------------------------------------------------------------------*/
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class RandomGen {
 
-    public RandomGen() { 
+    public RandomGen() {
 
         Scanner user = new Scanner(System.in);
         Random rand = new Random();

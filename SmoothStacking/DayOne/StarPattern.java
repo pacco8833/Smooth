@@ -1,6 +1,5 @@
-package SmoothStack.DayOne;
 /*----------------------------------------------------------------------------
-                            Program Useage:                               
+                            Program Useage:
 *----------------------------------------------------------------------------*
 1) forward
 *
@@ -25,11 +24,10 @@ package SmoothStack.DayOne;
  *****
   ***
    *
-    
+
 
 Author: Carl Clarke @ Smoothstack
 ----------------------------------------------------------------------------*/
-
 
 public class StarPattern {
 
@@ -43,24 +41,24 @@ public class StarPattern {
         case "forward":
 
             System.out.print("1)\n");
-            
+
             for (int i = 0; i < SIZE; i++) {
-             
+
                 pattern += "*";
-             
+
                 System.out.println(pattern);
             }
             System.out.println("\n. . . . . . .\n");
 
         case "backward":
-        pattern = "****";
+            pattern = "****";
 
-        System.out.print("2)\n");
-            
+            System.out.print("2)\n");
+
             for (int i = 0; i < SIZE; i++) {
-            
+
                 System.out.println(pattern.substring(i));
-            
+
             }
             System.out.println("\n. . . . . . .\n");
 
@@ -72,18 +70,18 @@ public class StarPattern {
             for (int i = 0; i < SIZE; i++) {
 
                 System.out.println(spaces + pattern + spaces);
-                
-                if ( spaces.length() >= 1 )
-                spaces = spaces.substring(1);
-                
+
+                if (spaces.length() >= 1)
+                    spaces = spaces.substring(1);
+
                 pattern += "**";
-            
+
             }
             System.out.print("\n. . . . . . .\n");
 
         case "upside-down":
 
-        spaces = "";
+            spaces = "";
             pattern = "*******";
 
             System.out.println("4)\n" + pattern);
